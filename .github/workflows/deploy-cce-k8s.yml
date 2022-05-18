@@ -54,7 +54,7 @@ jobs:
       with:
         region: ${{ env.REGIONID }}
         access-key-id: ${{ secrets.ACCESSKEY }}
-        access-key-secret: ${{ secrets.SECRETACCESSKEY }}
+        access-key-secret: ${{ secrets.SECRETACCESSKEYCCE }}
 
     # 设置 docker 环境
     - name: Set up Docker Buildx
