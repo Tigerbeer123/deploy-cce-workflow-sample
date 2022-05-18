@@ -15,7 +15,7 @@ env:
   # IMAGE_TAG: maven-samp-${{ github.sha }}
   REGIONID: ${region_id}
   #IMAGE_TAG: ${{ github.event.inputs.image_tag }} //如果希望手工控制镜像tag,也需要放开这行，同时屏蔽上面那行IMAGE_TAG
-  IMAGE_TAG: 'lzx'
+  IMAGE_TAG: ${region_id}
 jobs:
   build:
     runs-on: ubuntu-latest
