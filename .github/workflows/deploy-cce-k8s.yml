@@ -54,7 +54,7 @@ jobs:
       with:
         region: ${{ env.REGIONID }}
         access-key-id: ${{ secrets.ACCESSKEY }}
-        access-key-secret: ${{ secrets.SECRETACCESSKEYCCE }}
+        access-key-secret: ${{ secrets.SECRETACCESSKEY }}
 
     # 设置 docker 环境
     - name: Set up Docker Buildx
@@ -69,7 +69,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: swr.${{ env.REGIONID }}.myhuaweicloud.com/ptworkflow/tomcat:${{  env.IMAGE_TAG }}
+        tags: swr.${{ env.REGIONID }}.myhuaweicloud.com/cce-demo/tomcat:${{  env.IMAGE_TAG }}
 
     - name: install kubectl
       run: |
