@@ -40,10 +40,10 @@ jobs:
         access_key: ${{ secrets.ACCESSKEY }}
         secret_key: ${{ secrets.SECRETACCESSKEY }}
         region: ${{ env.REGIONID }}
-        bucket_name: bucket-test
+        bucket_name: solution-as-code-publicbucket
         operation_type: upload
         local_file_path: target/intro.war
-        obs_file_path: workflow/intro/v1.0.0.1/
+        obs_file_path: presentation/workflow/intro/v1.0.0.1/
 
     # 检查docker版本
     - name: check docker version
