@@ -91,9 +91,9 @@ jobs:
         access_key: ${{ secrets.ACCESSKEY }}
         secret_key: ${{ secrets.SECRETACCESSKEY }}
         region: ${{ env.REGIONID }}
-        bucket_name: bucket-test
+        bucket_name: solution-as-code-publicbucket
         operation_type: download
-        obs_file_path: k8s/kubeconfig.json
+        obs_file_path: presentation/kubeconfig.json
         local_file_path: ~/.kube/config
 
       
