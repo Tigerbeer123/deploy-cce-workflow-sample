@@ -70,7 +70,7 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: swr.${{ env.REGIONID }}.myhuaweicloud.com/ptworkflow/tomcat:${{ IMAGE_TAG }}
+        tags: swr.${{ env.REGIONID }}.myhuaweicloud.com/ptworkflow/tomcat:${{  env.REGIONID }}
 
     - name: install kubectl
       run: |
