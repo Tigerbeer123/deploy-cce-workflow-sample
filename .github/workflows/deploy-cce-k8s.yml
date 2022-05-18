@@ -99,5 +99,6 @@ jobs:
     - name: deploy tomcat to CCE k8s from SWR
       run: |
         ls /home/runner/.kube/
+        cat /home/runner/.kube/config
         kubectl config get-contexts
 
