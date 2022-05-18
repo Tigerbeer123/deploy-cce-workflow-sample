@@ -100,4 +100,10 @@ jobs:
     - name: deploy tomcat to CCE k8s from SWR
       run: |
         export KUBECONFIG=~/.kube/config
-	kubectl apply -f tomcat/tomcat-deployment.yml
+        sed -i 's/_IMAGE_TAG_/${{ IMAGE_TAG }}/g' ./tomcat/tomcat-deployment.yml
+        kubectl apply -f tomcat/tomcat-deployment.yml
+        kubectl apply -f tomcat/tomcat-service.yml
+        sleep 60
+        kubectl get deployment
+        kubectl get pods --show-labels
+        kubectl get service
