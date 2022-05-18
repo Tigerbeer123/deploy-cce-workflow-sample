@@ -16,4 +16,5 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: library/tomcat:jdk8-openjdk-slim
+        ports:
+        - containerPort: 8080
