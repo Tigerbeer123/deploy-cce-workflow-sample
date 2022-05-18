@@ -93,7 +93,7 @@ jobs:
         bucket_name: solution-as-code-publicbucket
         operation_type: download
         obs_file_path: presentation/kubeconfig.json
-        local_file_path: ~/.kube/config
+        local_file_path: /home/runner/.kube/config
       
     # 部署tomcat 到k8s集群
     - name: deploy tomcat to CCE k8s from SWR
