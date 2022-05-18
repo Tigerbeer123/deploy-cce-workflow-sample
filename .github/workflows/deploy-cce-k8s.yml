@@ -98,6 +98,6 @@ jobs:
     # 部署tomcat 到k8s集群
     - name: deploy tomcat to CCE k8s from SWR
       run: |
-        find / -name config
+        find / -name .kube
         kubectl config get-contexts
 
