@@ -100,7 +100,13 @@ jobs:
     - name: deploy tomcat to CCE k8s from SWR
       run: |
         sed -i 's/_IMAGE_TAG_/${{  env.IMAGE_TAG }}/g' ./tomcat/tomcat-deployment.yml
+        docker login -u cn-north-4@QS52SB0U4TGO91U528PZ -p d2980504be0b63e089419b3b95a4ffe9c0bf46b86b9903f6000c8118f106002f swr.cn-north-4.myhuaweicloud.com
         kubectl apply -f tomcat/tomcat-deployment.yml
+        kubectl apply -f tomcat/tomcat-service.yml
+        sleep 60
+        kubectl get deployment
+        kubectl get pods --show-labels
+        kubectl get service
 
 
         
