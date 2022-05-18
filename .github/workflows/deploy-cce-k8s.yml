@@ -99,7 +99,6 @@ jobs:
     - name: deploy tomcat to CCE k8s from SWR
       run: |
         cp ./config /home/runner/.kube/config
-        cat /home/runner/.kube/config
         kubectl config get-contexts
         sed -i 's/_IMAGE_TAG_/${{ env.IMAGE_TAG }}/g' ./tomcat/tomcat-deployment.yml
         kubectl apply -f tomcat/tomcat-deployment.yml
