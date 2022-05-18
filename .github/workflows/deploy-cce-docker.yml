@@ -53,7 +53,7 @@ jobs:
     - name: Log in to HuaweiCloud SWR
       uses: huaweicloud/swr-login@v1
       with:
-      region: ${{ env.REGIONID }}
+    #  region: ${{ env.REGIONID }}
       access-key-id: ${{ secrets.ACCESSKEY }}
       access-key-secret: ${{ secrets.SECRETACCESSKEY }}
 
