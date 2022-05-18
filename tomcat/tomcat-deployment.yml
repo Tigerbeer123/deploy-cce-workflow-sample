@@ -16,7 +16,4 @@ spec:
     spec:
       containers:
       - name: tomcat
-        #image: swr.cn-north-4.myhuaweicloud.com/cce-demo/tomcat:_IMAGE_TAG_
         image: library/tomcat:jdk8-openjdk-slim
-        #ports:
-        #- containerPort: 8080
